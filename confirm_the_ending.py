@@ -1,11 +1,22 @@
-def confirm_the_ending(string,target):
-    for i in range(len(string)-1,-1,-1):
-        for j in range(len(target)-1,-1,-1):
-            if string[i]==target[j]:
-                return True
-            else:
-                return False
+def confirm_ending(string, target):
+    flag = False
+    j = len(target)-1
+    i = len(string)-1
 
-string="asadfre hg"
-target= "hg"
-print(confirm_the_ending(string,target))
+    while i >= 0 and j >= 0:
+        if string[i] == target[j]:
+            flag = True
+        else:
+            flag = False
+            break
+        i -= 1
+        j -= 1
+
+    if flag:
+        return True
+    return False
+
+
+string = "asadf re hg"
+target = "adf re hg"
+print(confirm_ending(string, target))
