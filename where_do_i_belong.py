@@ -1,11 +1,9 @@
-def where_do_i_belong(lis,num):
-    
-    for i in range(len(lis)):
-        x = sorted(lis)
-        if lis[i] >= num:
-            lis[i] = num
-            return i
+def get_index_to_ins(lis, num):
+    sorted_copy = sorted(lis)
+    i = 0
+    while num >= sorted_copy[i]:
+        i += 1
+    return i
 
 
-lis=[5,3,20,3]
-print(where_do_i_belong(lis,7))
+print(get_index_to_ins([0, 20, 30, 40, 50], 35))
