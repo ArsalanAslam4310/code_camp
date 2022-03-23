@@ -1,7 +1,7 @@
 def lisreturn(value):
     new = []
     for i in range(len(value)):
-        value+=" ,"+ value[i]
+        value+=" ,"
         new.append(value[i])
     return new
 
