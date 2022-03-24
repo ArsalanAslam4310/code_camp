@@ -1,4 +1,5 @@
 def dot_matrix(ribbon):
+    '''abc'''
     n = 0
     while n < (len(ribbon[0])):
         for i in range(len(ribbon)):
