@@ -1,11 +1,16 @@
 def list_to_string(lis):
-    '''convert lis to string
     '''
-    new =""
+    convert list to string
+    '''
+    new = ""
     for i in range(len(lis)):
-       new +=", "+lis[i]
+        if i == len(lis)-1:
+            new += ", and "+lis[i]
+        else:
+            new += lis[i]+", "
+
     return new
 
 
-string=['apple', 'bananas', 'tofu', 'cats']
-print(list_to_string(string))  
+lis = ['apple', 'bananas', 'tofu', 'cats']
+print(list_to_string(lis))
