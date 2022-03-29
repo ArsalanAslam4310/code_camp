@@ -1,8 +1,12 @@
-def find_element(lis):
-  '''Find even number'''
-    for i in range(len(lis)):
-        if lis[i]%2==0:
-            return lis[i]
+def find_element(lis, func):
+    '''
 
-li=[1, 3, 5, 9]
-print(find_element(li))
+    '''
+    for val in lis:
+        if func(val):
+            return val
+    return None
+
+
+li = [1, 3, 5, 9, 8]
+print(find_element(li, lambda x: x % 2 == 0))
